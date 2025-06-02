@@ -13,7 +13,7 @@ class _animated_iconState extends State<animated_icon> with SingleTickerProvider
   @override
   void initState(){
     _animationController= AnimationController(vsync: this,
-    duration: Duration(milliseconds: 750),
+    duration: Duration(milliseconds: 900),
     );
         super.initState();
   }
@@ -26,7 +26,7 @@ class _animated_iconState extends State<animated_icon> with SingleTickerProvider
       body: Center(
         child: IconButton(
             icon: AnimatedIcon(
-              icon: AnimatedIcons.home_menu,
+              icon: AnimatedIcons.pause_play,
               progress: _animationController,
               size: 65,
               color: Colors.deepOrange,
