@@ -11,15 +11,88 @@ class _colorfulChangingBlocksState extends State<colorfulChangingBlocks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: Text('Medic Track'),
+        centerTitle: true,
+        title: Text('Home Page',
+        style: TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+          shadows: [
+            Shadow(
+              offset: Offset(2.0, 2.0),
+              blurRadius: 4.0,
+              color: Colors.black.withOpacity(0.5),
+            )
+          ]
+        ),
+        ),
+
       ),
+
+
 
 
       body: Container(
         child: Column(
           children: [
-
+            Row(
+              children: [
+                ElevatedButton(onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(24),
+                      backgroundColor: Colors.blue,
+                      elevation: 10,
+                    ),
+                    child: Text('   🧑‍⚕️\n'
+                        'Doctor',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),)),
+                SizedBox(width: 10,),
+                ElevatedButton(onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(26),
+                      backgroundColor: Colors.blue,
+                      elevation: 10,
+                    ),
+                    child: Text('Shop',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),)),
+                ElevatedButton(onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(27),
+                      backgroundColor: Colors.blue,
+                      elevation: 10,
+                    ),
+                    child: Text('Ambulance',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),)),
+                    SizedBox(width: 1,),
+                ElevatedButton(onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(26),
+                      backgroundColor: Colors.blue,
+                      elevation: 10,
+                    ),
+                    child: Text('🏥Hospital',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),)),
+              ],
+            ),
+            SizedBox(height: 20,),
             Row(
               children: [
                 Container(
