@@ -34,178 +34,199 @@ class _colorfulChangingBlocksState extends State<colorfulChangingBlocks> {
 
 
       body: Container(
-        child: Column(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            children: [
+          Row(
           children: [
-            Row(
-              children: [
-                ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(24),
-                      backgroundColor: Colors.blue,
-                      elevation: 10,
-                    ),
-                    child: Text('   🧑‍⚕️\n'
-                        'Doctor',
-                  style: TextStyle(
+          ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(24),
+            backgroundColor: Colors.blue,
+            elevation: 10,
+          ),
+          child: Text(
+            '   🧑‍⚕️\nDoctor',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(26),
+            backgroundColor: Colors.blue,
+            elevation: 10,
+          ),
+          child: Text(
+            'Shop',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(27),
+            backgroundColor: Colors.blue,
+            elevation: 10,
+          ),
+          child: Text(
+            'Ambulance',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(26),
+            backgroundColor: Colors.blue,
+            elevation: 10,
+          ),
+          child: Text(
+            '🏥Hospital',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        )
+      ]),
+              SizedBox(height: 20,),
+              Row(
+                children: [
+                  Container(
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),)),
-                SizedBox(width: 10,),
-                ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(26),
-                      backgroundColor: Colors.blue,
-                      elevation: 10,
-                    ),
-                    child: Text('Shop',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),)),
-                ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(27),
-                      backgroundColor: Colors.blue,
-                      elevation: 10,
-                    ),
-                    child: Text('Ambulance',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12,
-                      ),)),
-                    SizedBox(width: 1,),
-                ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(26),
-                      backgroundColor: Colors.blue,
-                      elevation: 10,
-                    ),
-                    child: Text('🏥Hospital',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),)),
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              children: [
-                Container(
-                  color: Colors.white,
-                  width: 80,
-                  height: 20,
-                  child:
-                  Text('      Time->'),
-                ),
-                Container(
-                  color: Colors.white,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Morning'),
-                ),
-                SizedBox(width: 1,),
-                Container(
-                  color: Colors.white,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Day'),
-                ),
-                SizedBox(width: 2,),
-                Container(
-                  color: Colors.white,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Night'),
-                ),
-
-
-              ],
-            ),
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                Container(
-                  color: Colors.white,
-                  width: 80,
-                  height: 20,
-                  child:
-                  Text('Medic 1:'),
-                ),
-                Container(
-                  color: Colors.grey,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('No medic'),
-                ),
-                SizedBox(width: 1,),
-                Container(
-                  color: Colors.green,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Taken'),
-                ),
-                SizedBox(width: 2,),
-                Container(
-                  color: Colors.red,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Missed'),
-                ),
-
-
-              ],
-            ),
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                Container(
-                  color: Colors.white,
-                  width: 80,
-                  height: 20,
-                  child:
-                  Text('Medic 2:'),
-                ),
-
-                Container(
-
-                  color: Colors.red,
+                    width: 80,
+                    height: 20,
+                    child:
+                    Text('      Time->'),
+                  ),
+                  Container(
+                    color: Colors.white,
                     width: 100,
                     height: 20,
-                  child:
-                  Text('Missed'),
-                ),
-                SizedBox(width: 1,),
-                Container(
+                    child:
+                    Text('Morning'),
+                  ),
+                  SizedBox(width: 1,),
+                  Container(
+                    color: Colors.white,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('Day'),
+                  ),
+                  SizedBox(width: 2,),
+                  Container(
+                    color: Colors.white,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('Night'),
+                  ),
 
-                  color: Colors.yellow,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('Low Stock'),
-                ),
-                SizedBox(width: 1,),
-                Container(
-                  color: Colors.blue,
-                  width: 100,
-                  height: 20,
-                  child:
-                  Text('To be take...'),
-                ),
 
-              ],
-            ),
-          ],
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  Container(
+                    color: Colors.white,
+                    width: 80,
+                    height: 20,
+                    child:
+                    Text('Medic 1:'),
+                  ),
+                  Container(
+                    color: Colors.grey,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('No medic'),
+                  ),
+                  SizedBox(width: 1,),
+                  Container(
+                    color: Colors.green,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('Taken'),
+                  ),
+                  SizedBox(width: 2,),
+                  Container(
+                    color: Colors.red,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('Missed'),
+                  ),
+
+
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  Container(
+                    color: Colors.white,
+                    width: 80,
+                    height: 20,
+                    child:
+                    Text('Medic 2:'),
+                  ),
+
+                  Container(
+
+                    color: Colors.red,
+                      width: 100,
+                      height: 20,
+                    child:
+                    Text('Missed'),
+                  ),
+                  SizedBox(width: 1,),
+                  Container(
+
+                    color: Colors.yellow,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('Low Stock'),
+                  ),
+                  SizedBox(width: 1,),
+                  Container(
+                    color: Colors.blue,
+                    width: 100,
+                    height: 20,
+                    child:
+                    Text('To be take...'),
+                  ),
+
+                ],
+              ),
+            ],
+          ),
         ),
 
       ),
