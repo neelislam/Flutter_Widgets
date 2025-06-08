@@ -16,6 +16,10 @@ class _clock_and_timeState extends State<clock_and_time> {
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
+
+  final List<String> _weekname = [
+    'Sat', 'Sun' , 'Mon' , 'tue' , 'Wed' , 'Thu' , 'fri'
+  ];
   @override
   void initState(){
     super.initState();
@@ -40,6 +44,7 @@ class _clock_and_timeState extends State<clock_and_time> {
     ? Colors.red : Colors.green;
    // var time = DateTime.now();
     String monthName = _monthName[_currentTime.month - 1];
+    String weekname = _weekname[_currentTime.weekday-6];
     return Scaffold(
 
       backgroundColor: Colors.deepOrange,
@@ -65,7 +70,7 @@ class _clock_and_timeState extends State<clock_and_time> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('${_currentTime.day} $monthName, ${_currentTime.year} \n ${_currentTime.hour} : ${_currentTime.minute} : ${_currentTime.second} \n ms-${_currentTime.millisecond}',
+                Text('$weekname ${_currentTime.day} $monthName, ${_currentTime.year} \n ${_currentTime.hour} : ${_currentTime.minute} : ${_currentTime.second} \n ms-${_currentTime.millisecond}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
