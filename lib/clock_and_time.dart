@@ -45,11 +45,14 @@ class _clock_and_timeState extends State<clock_and_time> {
    // var time = DateTime.now();
     String monthName = _monthName[_currentTime.month - 1];
     String weekname = _weekname[_currentTime.weekday-6];
+
     return Scaffold(
+
 
       backgroundColor: Colors.deepOrange,
 
       appBar: AppBar(
+
         centerTitle: true,
         title: Text('Date and Time',
         style: TextStyle(
