@@ -40,7 +40,7 @@ class _clock_and_timeState extends State<clock_and_time> {
   @override
   Widget build(BuildContext context) {
     bool cat = false;
-    Color cardColor = (_currentTime.millisecond > 0 && _currentTime.millisecond < 800 )
+    Color cardColor = (_currentTime.millisecond > 0&& _currentTime.millisecond < 800 )
     ? Colors.red : Colors.green;
    // var time = DateTime.now();
     String monthName = _monthName[_currentTime.month - 1];
